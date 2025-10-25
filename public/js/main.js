@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (ctaLink) {
         ctaLink.addEventListener('click', function(e) {
             e.preventDefault();
-            const projectsSection = document.getElementById('projects');
+            const projectsSection = document.getElementById('portfolio');
             if (projectsSection) {
                 projectsSection.scrollIntoView({
                     behavior: 'smooth'
@@ -170,36 +170,204 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    let allProjects = [];
+    let currentPage = 1;
+    const projectsPerPage = 6;
 
     // Load projects
     loadProjects();
 
-    async function loadProjects() {
-        try {
-            const response = await fetch('/api/projects');
-            const projects = await response.json();
-            const projectsGrid = document.getElementById('projectsGrid');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+            currentPage++;
+            displayProjects(currentPage);
+            updateLoadMoreButton();
             
-            if (projectsGrid) {
-                projects.forEach(project => {
-                    const projectCard = document.createElement('div');
-                    projectCard.className = 'project-card';
-                    projectCard.innerHTML = `
-                        <h3>${project.title}</h3>
-                        <p>${project.description}</p>
-                    `;
-                    
-                    projectCard.addEventListener('click', function() {
-                        window.location.href = `/project/${project.id}`;
+            // Smooth scroll verso i nuovi progetti
+            setTimeout(() => {
+                const portfolioGrid = document.getElementById('portfolioGrid');
+                const newItems = portfolioGrid.querySelectorAll('.portfolio-item');
+                const lastOldItem = newItems[newItems.length - projectsPerPage - 1];
+                
+                if (lastOldItem) {
+                    lastOldItem.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'nearest' 
                     });
-                    
-                    projectsGrid.appendChild(projectCard);
-                });
-            }
-        } catch (error) {
-            console.error('Errore nel caricamento dei progetti:', error);
-        }
+                }
+            }, 100);
+        });
     }
+    async function loadProjects() {
+    try {
+        const response = await fetch('/api/projects');
+        allProjects = await response.json();
+        
+        // Mostra i primi 6 progetti
+        displayProjects(currentPage);
+        
+        // Mostra il pulsante Load More se ci sono più di 6 progetti
+        updateLoadMoreButton();
+        
+    } catch (error) {
+        console.error('Errore nel caricamento del portfolio:', error);
+    }
+}
+
+// Visualizza progetti per la pagina corrente
+function displayProjects(page) {
+    const portfolioGrid = document.getElementById('portfolioGrid');
+    if (!portfolioGrid) return;
+    
+    const startIndex = (page - 1) * projectsPerPage;
+    const endIndex = startIndex + projectsPerPage;
+    const projectsToShow = allProjects.slice(startIndex, endIndex);
+    
+    projectsToShow.forEach(project => {
+        const portfolioItem = document.createElement('div');
+        portfolioItem.className = 'portfolio-item';
+        portfolioItem.style.opacity = '0';
+        portfolioItem.style.transform = 'translateY(30px)';
+        
+        portfolioItem.innerHTML = `
+            <div class="portfolio-image">
+                <img src="${project.images[0]}" alt="${project.title}" loading="lazy">
+                <div class="portfolio-overlay">
+                    <div class="portfolio-info">
+                        <h3>${project.title}</h3>
+                        <p>${project.subtitle}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        portfolioItem.addEventListener('click', function() {
+            openProjectModal(project.id);
+        });
+        
+        portfolioGrid.appendChild(portfolioItem);
+        
+        // Animazione di entrata
+        setTimeout(() => {
+            portfolioItem.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            portfolioItem.style.opacity = '1';
+            portfolioItem.style.transform = 'translateY(0)';
+        }, 50);
+    });
+}
+
+// Project Modal System
+let currentProject = null;
+let currentImageIndex = 0;
+
+// Apri modal progetto
+function openProjectModal(projectId) {
+    const project = allProjects.find(p => p.id === projectId);
+    if (!project) return;
+    
+    currentProject = project;
+    currentImageIndex = 0;
+    
+    // Popola modal con i dati del progetto
+    document.getElementById('projectTitle').textContent = project.title;
+    document.getElementById('projectSubtitle').textContent = project.subtitle;
+    document.getElementById('projectDescription').textContent = project.fullDescription || project.description;
+    document.getElementById('projectLocation').textContent = project.location || '—';
+    document.getElementById('projectYear').textContent = project.data || '—';    
+    // Imposta immagini
+    updateModalImage();
+    
+    // Mostra modal
+    const modal = document.getElementById('projectModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+// Aggiorna immagine nel modal
+function updateModalImage() {
+    if (!currentProject || !currentProject.images) return;
+    
+    const mainImage = document.getElementById('mainImage');
+    const currentIndexEl = document.getElementById('currentImageIndex');
+    const totalImagesEl = document.getElementById('totalImages');
+    const prevBtn = document.getElementById('galleryPrev');
+    const nextBtn = document.getElementById('galleryNext');
+    
+    // Aggiorna immagine
+    mainImage.style.opacity = '0';
+    setTimeout(() => {
+        mainImage.src = currentProject.images[currentImageIndex];
+        mainImage.alt = `${currentProject.title} - Image ${currentImageIndex + 1}`;
+        mainImage.style.opacity = '1';
+    }, 200);
+    
+    // Aggiorna counter
+    currentIndexEl.textContent = currentImageIndex + 1;
+    totalImagesEl.textContent = currentProject.images.length;
+    
+    // Gestisci pulsanti
+    prevBtn.disabled = currentImageIndex === 0;
+    nextBtn.disabled = currentImageIndex === currentProject.images.length - 1;
+}
+
+// Chiudi modal
+function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+    currentProject = null;
+    currentImageIndex = 0;
+}
+
+// Naviga immagini
+function navigateGallery(direction) {
+    if (!currentProject || !currentProject.images) return;
+    
+    if (direction === 'next' && currentImageIndex < currentProject.images.length - 1) {
+        currentImageIndex++;
+    } else if (direction === 'prev' && currentImageIndex > 0) {
+        currentImageIndex--;
+    }
+    
+    updateModalImage();
+}
+
+// Expand/fullscreen
+function toggleFullscreen() {
+    const modal = document.getElementById('projectModal');
+    
+    if (!document.fullscreenElement) {
+        modal.requestFullscreen().catch(err => {
+            console.log('Error attempting to enable fullscreen:', err);
+        });
+    } else {
+        document.exitFullscreen();
+    }
+}
+
+// Aggiorna il pulsante Load More
+function updateLoadMoreButton() {
+    const loadMoreContainer = document.getElementById('loadMoreContainer');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const projectsCount = document.getElementById('projectsCount');
+    
+    if (!loadMoreContainer) return;
+    
+    const totalProjects = allProjects.length;
+    const shownProjects = currentPage * projectsPerPage;
+    
+    // Mostra il pulsante se ci sono ancora progetti da caricare
+    if (shownProjects < totalProjects) {
+        loadMoreContainer.style.display = 'block';
+        const remainingProjects = totalProjects - shownProjects;
+        projectsCount.textContent = `${shownProjects} di ${totalProjects}`;
+    } else {
+        // Nascondi il pulsante quando tutti i progetti sono visibili
+        loadMoreContainer.style.display = 'none';
+    }
+}
 
     // Header background on scroll
     window.addEventListener('scroll', function() {
@@ -234,4 +402,52 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
         observer.observe(section);
     });
+
+        // Modal close
+    const modalClose = document.getElementById('modalClose');
+    if (modalClose) {
+        modalClose.addEventListener('click', closeProjectModal);
+    }
+    
+    // Modal expand
+    const modalExpand = document.getElementById('modalExpand');
+    if (modalExpand) {
+        modalExpand.addEventListener('click', toggleFullscreen);
+    }
+    
+    // Gallery navigation
+    const galleryPrev = document.getElementById('galleryPrev');
+    const galleryNext = document.getElementById('galleryNext');
+    
+    if (galleryPrev) {
+        galleryPrev.addEventListener('click', () => navigateGallery('prev'));
+    }
+    
+    if (galleryNext) {
+        galleryNext.addEventListener('click', () => navigateGallery('next'));
+    }
+    
+    // Close modal con ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeProjectModal();
+        } else if (e.key === 'ArrowLeft' && currentProject) {
+            navigateGallery('prev');
+        } else if (e.key === 'ArrowRight' && currentProject) {
+            navigateGallery('next');
+        }
+    });
+    
+    // Close modal cliccando fuori
+    const projectModal = document.getElementById('projectModal');
+    if (projectModal) {
+        projectModal.addEventListener('click', (e) => {
+            if (e.target === projectModal) {
+                closeProjectModal();
+            }
+        });
+    }
+
 });
+
+

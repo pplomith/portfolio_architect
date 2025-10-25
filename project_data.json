@@ -1,0 +1,66 @@
+{
+    "mydescr": {
+        "paragraphs": [
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget massa quam enim cursus. Egestas maecenas pharetra, amet, sed dui. Nunc, viverra donec in amet, sed.",
+            "Commodo vivera eu volutpat amet, leo non senectus odio dolor. Id at urna non porttitor elementum. Viverra senectus dui ultricies dolor."
+        ]
+    },
+    "project": [
+        {
+            "data": "Marzo 2022",
+            "location": "Capua (CE)",
+            "id": 1,
+            "title": "Progetto Residenziale",
+            "subtitle": "Villa moderna con design sostenibile",
+            "images": [
+                "\\images\\hero-1.jpg",
+                "\\images\\hero-2.jpg","\\images\\hero-3.jpg"
+            ],
+            "description": [
+                "Progettazione di una torre per uffici all'avanguardia con certificazione LEED, che integra soluzioni sostenibili e tecnologie innovative per creare un ambiente di lavoro efficiente e rispettoso dell'ambiente.",
+                "Il progetto include spazi flessibili, aree verdi e sistemi energetici avanzati per ridurre l'impatto ambientale e migliorare il benessere dei dipendenti."
+            ]
+        },
+        {
+                        "data": "Marzo 2023",
+            "location": "Caserta (CE)",
+            "id": 2,
+            "title": "Centro Commerciale",
+            "subtitle": "Spazio commerciale innovativo",
+            "images": ["\\images\\hero-2.jpg"],
+            "description": [
+                "Progettazione di una torre per uffici all'avanguardia con certificazione LEED, che integra soluzioni sostenibili e tecnologie innovative per creare un ambiente di lavoro efficiente e rispettoso dell'ambiente.",
+                "Il progetto include spazi flessibili, aree verdi e sistemi energetici avanzati per ridurre l'impatto ambientale e migliorare il benessere dei dipendenti."
+            ]
+        },
+        {
+                        "data": "Marzo 2024",
+            "location": "Napoli (CE)",
+            "id": 3,
+            "title": "Uffici Corporate",
+            "subtitle": "Torre per uffici con certificazione LEED",
+            "images": ["\\images\\hero-3.jpg"],
+            "description": [
+                "Progettazione di una torre per uffici all'avanguardia con certificazione LEED, che integra soluzioni sostenibili e tecnologie innovative per creare un ambiente di lavoro efficiente e rispettoso dell'ambiente.",
+                "Il progetto include spazi flessibili, aree verdi e sistemi energetici avanzati per ridurre l'impatto ambientale e migliorare il benessere dei dipendenti."
+            ]
+        },
+        {
+                        "data": "Marzo 2025",
+            "location": "Capua (CE)",
+            "id": 4,
+            "title": "A Corporate",
+            "subtitle": "Mensa per uffici con certificazione LEED",
+            "images": ["\\images\\hero-4.jpg"],
+            "description": [
+                "Progettazione di una torre per uffici all'avanguardia con certificazione LEED, che integra soluzioni sostenibili e tecnologie innovative per creare un ambiente di lavoro efficiente e rispettoso dell'ambiente.",
+                "Il progetto include spazi flessibili, aree verdi e sistemi energetici avanzati per ridurre l'impatto ambientale e migliorare il benessere dei dipendenti."
+            ]
+        }
+    ],
+    "contacts": {
+        "email": "prova@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/prova/",
+        "address": "Capua (CE), Italia"
+    }
+}  

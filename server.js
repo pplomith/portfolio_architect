@@ -2,6 +2,25 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
+var fs = require('fs');
+
+
+var data = JSON.parse(fs.readFileSync('project_data.json', 'utf8'));
+
+const portfolioData = {
+  siteTitle: 'Giovanna E. Plomitallo - Architetto',
+  hero: {
+    title: 'PERSONALIZE AND CUSTOMIZE'
+  },
+  about: {
+    sectionLabel: '— CHI SONO',
+    title: 'About Me',
+    paragraphs: data.mydescr.paragraphs
+  },
+  projects: data.project,
+  contacts: data.contacts
+};
+
 
 // Configurazione EJS come template engine
 app.set('view engine', 'ejs');
@@ -15,27 +34,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Dati del portfolio
-const portfolioData = {
-  siteTitle: 'Giovanna E. Plomitallo - Architetto',
-  hero: {
-    title: 'PERSONALIZE AND CUSTOMIZE',
-    subtitle: 'View Project'
-  },
-  about: {
-    sectionLabel: '— WHO I AM',
-    title: 'About Me',
-    paragraphs: [
-      'Amet, consectetur adipiscing elit. Commodo viverra eu volutpat amet, leo ultrici non senectus odio dolor. Id at urna non porttitor elentum. Viverra senectus lorem ipsum dolor sit adui ultricies dolor varius nibh velit viverra euen.',
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Commodo viverra eu volutpat amet, leo non senetus odio dolor. Id at urna non porttitor etum. Vivera senectus elit dui ultricies dolor. Varius nibh velit pellentesque sapien, sapien neque dignissim.',
-      'Commodo vivera eu volutpat amet, leo non senectus odio dolor. Id at urna non porttitor elementum. Viverra senectus dui ultricies dolor.'
-    ]
-  },
-  projects: [
-    { id: 1, title: 'Progetto Residenziale', description: 'Villa moderna con design sostenibile' },
-    { id: 2, title: 'Centro Commerciale', description: 'Spazio commerciale innovativo' },
-    { id: 3, title: 'Uffici Corporate', description: 'Torre per uffici con certificazione LEED' }
-  ]
-};
+
 
 // Routes
 app.get('/', (req, res) => {

@@ -7,18 +7,22 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet"> -->
+
+<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">G.</div>
+        <div class="logo"> <span class="logo-text">GIOVANNA EMANUELA PLOMITALLO</span></div>
         <button class="menu-toggle" id="menuToggle">☰</button>
         <nav class="nav-menu" id="navMenu">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#projects">Progetti</a></li>
+                <li><a href="#portfolio">Progetti</a></li>
                 <li><a href="#contact">Contatti</a></li>
             </ul>
         </nav>
@@ -45,8 +49,8 @@
     <div class="hero-content">
         <h1 id="heroTitle"><%= data.hero.title %></h1>
         <p class="hero-subtitle" id="heroSubtitle">Creating extraordinary architectural experiences</p>
-        <a href="#projects" class="cta-link" id="ctaLink">
-            <%= data.hero.subtitle %><span class="arrow">⟶</span>
+        <a href="#portfolio" class="cta-link" id="ctaLink">
+           Vedi progetti<span class="arrow">⟶</span>
         </a>
     </div>
     
@@ -82,28 +86,223 @@
                     <% data.about.paragraphs.forEach(paragraph => { %>
                         <p><%= paragraph %></p>
                     <% }); %>   
-                    <a href="#projects" class="btn-portfolio">VIEW MY PORTFOLIO</a>
+                    <a href="#portfolio" class="btn-portfolio">MIEI PROGETTI</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="projects" id="projects">
-        <div class="container">
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <div class="portfolio-header">
+            <p class="section-label">— i miei lavori</p>
             <h2>Progetti</h2>
-            <div class="projects-grid" id="projectsGrid">
-                <!-- Projects loaded via JavaScript -->
+        </div>
+        
+        <div class="portfolio-grid" id="portfolioGrid">
+            <!-- Projects loaded via JavaScript -->
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="portfolio-load-more" id="loadMoreContainer" style="display: none;">
+            <button class="btn-load-more" id="loadMoreBtn">
+                <span>Carica altri progetti</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <p class="projects-count" id="projectsCount"></p>
+        </div>
+    </div>
+</section>
+
+<div class="project-modal" id="projectModal">
+    <div class="project-modal-content">
+        <!-- Close Button -->
+        <button class="modal-close" id="modalClose">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        
+        <!-- Expand Button -->
+        <button class="modal-expand" id="modalExpand">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+            </svg>
+        </button>
+        
+        <div class="project-modal-inner">
+            <!-- Left Side - Image Gallery -->
+            <div class="project-gallery">
+                <div class="gallery-main">
+                    <img id="mainImage" src="" alt="">
+                </div>
+                
+                <!-- Gallery Navigation -->
+                <div class="gallery-nav">
+                    <button class="gallery-btn gallery-prev" id="galleryPrev">‹</button>
+                    <button class="gallery-btn gallery-next" id="galleryNext">›</button>
+                </div>
+                
+                <!-- Image Counter -->
+                <div class="gallery-counter">
+                    <span id="currentImageIndex">1</span> / <span id="totalImages">4</span>
+                </div>
+            </div>
+            
+            <!-- Right Side - Project Info -->
+            <div class="project-info">
+                <div class="project-info-scroll">
+                    <h2 id="projectTitle">Titolo immagine.</h2>
+                    <h5 id="projectSubtitle">Sottotitolo immagine.</h5>
+                    <p id="projectDescription" class="project-description">Descrivi l'immagine qui.</p>
+                    
+                    <!-- Project Details Grid -->
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">LOCALITA'</span>
+                            <span class="detail-value" id="projectLocation">—</span>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <span class="detail-label">DATA</span>
+                            <span class="detail-value" id="projectYear">—</span>
+                        </div>
+                       
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 <%= data.siteTitle %></p>
+
+    <!-- Contact Section -->
+     <section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-wrapper">
+            <!-- Contact Form -->
+            <div class="contact-form-container">
+                <div class="contact-header">
+                    <p class="section-label">— RESTIAMO IN CONTATTO</p>
+                    <h2>Contattami</h2>
+                    <p class="contact-description">Hai qualche domanda o vuoi ricevere il mio Curriculum Vitae? Contattami.</p>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="fullName" name="fullName" placeholder="Nome completo*" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Email*" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" placeholder="Messaggio*" required></textarea>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="privacy" name="privacy" required>
+                        <label for="privacy">I agree to privacy policy</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">INVIA</button>
+                </form>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="contact-info-container">
+                <div class="contact-info-box">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="contact-info-text">
+                            <h3>Indirizzo:</h3>
+                            <p id="address_info"><%= data.contacts.address %></p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="contact-info-text">
+                            <h3>EMAIL:</h3>
+                            <p id="email_info"><%= data.contacts.email %></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                        </div>
+                        <div class="contact-info-text">
+                            <h3>LINKEDIN:</h3>
+                            <a href=<%= data.contacts.linkedin %> aria-label="LinkedIn">Giovanna Emanuela Plomitallo</a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
         </div>
-    </footer>
+    </div>
+</section>
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>GIOVANNA EMANUELA PLOMITALLO</h3>
+                <p>Architetto</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contatti</a>
+            </div>
+            <div class="footer-social">
+                
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                </a>
+                
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 <%= data.siteTitle %>. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
     <script src="/js/main.js"></script>
 </body>

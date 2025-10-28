@@ -3,6 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon principale (SVG scalabile) -->
+<link rel="icon" href="images/favicon_io/favicon.svg" type="image/svg+xml" sizes="any">
+<!-- Fallback PNG per browser senza SVG -->
+<link rel="icon" href="images/favicon_io/favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="images/favicon_io/favicon-16x16.png" type="image/png" sizes="16x16">
+
+<!-- Apple Touch Icon (iOS Home Screen) -->
+<link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png" sizes="180x180">
+<!-- Opzionali aggiuntive per iPad -->
+<link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon-167x167.png" sizes="167x167">
+<link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon-152x152.png" sizes="152x152">
+
+<!-- Safari pinned tab (macOS) -->
+<link rel="mask-icon" href="images/favicon_io/safari-pinned-tab.svg" color="#000000">
+
+<!-- Manifest PWA (Android/Chrome e installazione) -->
+<link rel="manifest" href="images/favicon_io/site.webmanifest">
+
+<!-- ICO multi-size come ulteriore compatibilità -->
+<link rel="icon" href="images/favicon_io/favicon.ico">
+
     <title><%= data.siteTitle %></title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -78,7 +99,7 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image">
-                    <img src="/images/architecture-image.jpg" alt="Architecture" loading="lazy">
+                    <img src="/images/foto-giovanna.jpg" loading="lazy">
                 </div>
                 <div class="about-text">
                     <p class="section-label"><%= data.about.sectionLabel %></p>
@@ -96,8 +117,8 @@
 <section class="portfolio" id="portfolio">
     <div class="container">
         <div class="portfolio-header">
-            <p class="section-label">— i miei lavori</p>
-            <h2>Progetti</h2>
+            <p class="section-label"><%= data.project.sectionLabel %></p>
+            <h2><%= data.project.title %></h2>
         </div>
         
         <div class="portfolio-grid" id="portfolioGrid">
@@ -187,9 +208,9 @@
             <!-- Contact Form -->
             <div class="contact-form-container">
                 <div class="contact-header">
-                    <p class="section-label">— RESTIAMO IN CONTATTO</p>
-                    <h2>Contattami</h2>
-                    <p class="contact-description">Hai qualche domanda o vuoi ricevere il mio Curriculum Vitae? Contattami.</p>
+                    <p class="section-label"><%= data.contact_section.sectionLabel %></p>
+                    <h2><%= data.contact_section.title %></h2>
+                    <p class="contact-description"><%= data.contact_section.description %></p>
                 </div>
                 
                 <form class="contact-form" id="contactForm">
@@ -207,7 +228,7 @@
                     
                     <div class="form-group checkbox-group">
                         <input type="checkbox" id="privacy" name="privacy" required>
-                        <label for="privacy">I agree to privacy policy</label>
+                        <label for="privacy">I dati verranno utilizzati solo per entrare in contatto e solamente nel contesto dell'email inviata. Non verrà divulgata o condivisa alcuna informazione personale.</label>
                     </div>
                     
                     <button type="submit" class="btn-submit">INVIA</button>
@@ -303,7 +324,7 @@
         </div>
     </div>
 </footer>
-
+    
     <script src="/js/main.js"></script>
 </body>
 </html>

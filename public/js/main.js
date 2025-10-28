@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
     // Hero Slider Configuration
     const slides = document.querySelectorAll('.slide');
     const indicators = document.querySelectorAll('.indicator');
@@ -10,28 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSlide = 0;
     let slideInterval;
     
-    // Slide data
-    const slideData = [
-        {
-            title: 'PERSONALIZE AND CUSTOMIZE',
-            subtitle: 'Creating extraordinary architectural experiences'
-        },
-        {
-            title: 'INNOVATIVE DESIGN',
-            subtitle: 'Pushing boundaries in modern architecture'
-        },
-        {
-            title: 'SUSTAINABLE ARCHITECTURE',
-            subtitle: 'Building for a better tomorrow'
-        },
-        {
-            title: 'LUXURY LIVING SPACES',
-            subtitle: 'Where elegance meets functionality'
-        }
-    ];
 
     // Initialize slider
-    function initSlider() {
+    async function initSlider() {
+        const response = await fetch('/api/slideData');
+        slideData = await response.json();
+       
         // Set background images
         slides.forEach((slide, index) => {
             const bgImage = slide.getAttribute('data-bg');

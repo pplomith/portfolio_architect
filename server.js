@@ -5,21 +5,8 @@ const PORT = process.env.PORT || 3000;
 var fs = require('fs');
 
 
-var data = JSON.parse(fs.readFileSync('project_data.json', 'utf8'));
+var portfolioData = JSON.parse(fs.readFileSync('project_data.json', 'utf8'));
 
-const portfolioData = {
-  siteTitle: 'Giovanna E. Plomitallo - Architetto',
-  hero: {
-    title: 'PERSONALIZE AND CUSTOMIZE'
-  },
-  about: {
-    sectionLabel: '— CHI SONO',
-    title: 'About Me',
-    paragraphs: data.mydescr.paragraphs
-  },
-  projects: data.project,
-  contacts: data.contacts
-};
 
 
 // Configurazione EJS come template engine
@@ -39,6 +26,10 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.get('/', (req, res) => {
   res.render('index', { data: portfolioData });
+});
+
+app.get('/api/slideData', (req, res) => {
+  res.json(portfolioData.slideData);
 });
 
 app.get('/api/projects', (req, res) => {

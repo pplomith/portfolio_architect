@@ -571,10 +571,7 @@ header {
         background: var(--primary-color);
     }
     
-    .modal-close,
-    .modal-expand {
-        color: var(--white);
-    }
+    
 }
 
 /* Left Side - Image Gallery */

@@ -1,6 +1,10 @@
 const express = require('express');
 const path = require('path');
+const helmet = require('helmet');
+
 const app = express();
+
+app.use(helmet());  
 const PORT = process.env.PORT || 3000;
 var fs = require('fs');
 
@@ -46,6 +50,13 @@ app.get('/project/:id', (req, res) => {
     res.status(404).render('404', { data: portfolioData });
   }
 });
+
+app.post('/api/sendEmail',async  (req, res) => {
+  const { fullName, email, message, privacy } = req.body;
+  console.log(req.body);
+  res.json({ success: true, message: 'Email inviata con successo' });
+});
+
 
 // Avvio del server
 app.listen(PORT, () => {

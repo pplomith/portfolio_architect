@@ -78,47 +78,57 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Start autoplay
-    function startAutoplay() {
-        slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
-    }
-
-    // Stop autoplay
-    function stopAutoplay() {
+function startAutoplay() {
+    // Cancella l'intervallo precedente se esiste
+    if (slideInterval) {
         clearInterval(slideInterval);
     }
+    slideInterval = setInterval(nextSlide, 5000);
+}
+
+function stopAutoplay() {
+    if (slideInterval) {
+        clearInterval(slideInterval);
+        slideInterval = null; // Resetta il riferimento
+    }
+}
 
     // Event listeners
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            stopAutoplay();
-            nextSlide();
-            setTimeout(startAutoplay, 10000); // Restart after 10 seconds
-        });
-    }
-
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
-            stopAutoplay();
-            prevSlide();
-            setTimeout(startAutoplay, 10000); // Restart after 10 seconds
-        });
-    }
-
-    // Indicator clicks
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            stopAutoplay();
-            showSlide(index);
-            setTimeout(startAutoplay, 10000); // Restart after 10 seconds
-        });
+if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+        stopAutoplay();
+        nextSlide();
+        startAutoplay();
     });
+}
+
+if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+        stopAutoplay();
+        prevSlide();
+        startAutoplay();
+    });
+}
+
+indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+        stopAutoplay();
+        showSlide(index);
+        startAutoplay();
+    });
+});
 
     // Pause on hover
-    const heroSection = document.querySelector('.hero');
-    if (heroSection) {
-        heroSection.addEventListener('mouseenter', stopAutoplay);
-        heroSection.addEventListener('mouseleave', startAutoplay);
-    }
+const heroSection = document.querySelector('.hero');
+if (heroSection) {
+    heroSection.addEventListener('mouseenter', () => {
+        if (slideInterval) stopAutoplay();
+    });
+    
+    heroSection.addEventListener('mouseleave', () => {
+        if (!slideInterval) startAutoplay();
+    });
+}
 
     // Initialize the slider
     initSlider();
@@ -222,7 +232,6 @@ function displayProjects(page) {
                 <div class="portfolio-overlay">
                     <div class="portfolio-info">
                         <h3>${project.title}</h3>
-                        <p>${project.subtitle}</p>
                     </div>
                 </div>
             </div>
@@ -257,10 +266,13 @@ function openProjectModal(projectId) {
     
     // Popola modal con i dati del progetto
     document.getElementById('projectTitle').textContent = project.title;
-    document.getElementById('projectSubtitle').textContent = project.subtitle;
     document.getElementById('projectDescription').textContent = project.fullDescription || project.description;
     document.getElementById('projectLocation').textContent = project.location || '—';
     document.getElementById('projectYear').textContent = project.data || '—';    
+
+    document.getElementById('projectType').textContent = project.type || '—';    
+    document.getElementById('projectCollab').textContent = project.collaboration || '—';    
+    document.getElementById('projectStatus').textContent = project.status || '—';    
     // Imposta immagini
     updateModalImage();
     
@@ -433,6 +445,80 @@ function updateLoadMoreButton() {
         });
     }
 
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = {
+        fullName: document.getElementById('fullName').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value,
+        privacy: document.getElementById('privacy').checked
+    };
+    
+    // Mostra loader
+    const submitBtn = e.target.querySelector('.btn-submit');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'INVIO IN CORSO...';
+    
+    try {
+        const response = await fetch('/api/sendEmail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+        
+        const result = await response.json();
+        
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        
+        if (response.ok) {
+            showDialog('Messaggio inviato con successo!', 'success');
+            document.getElementById('contactForm').reset();
+        } else {
+            showDialog('Errore: ' + result.error, 'error');
+        }
+    } catch (error) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+        showDialog('Errore durante l\'invio del messaggio', 'error');
+        console.error(error);
+    }
+});
+
+function showDialog(message, type) {
+    const dialog = document.createElement('div');
+    dialog.className = `custom-dialog ${type}`;
+    dialog.innerHTML = `
+        <div class="custom-dialog-content">
+            <p>${message}</p>
+            <button class="dialog-btn">OK</button>
+        </div>
+    `;
+    document.body.appendChild(dialog);
+    
+    // Event listener sul bottone
+    dialog.querySelector('.dialog-btn').addEventListener('click', () => {
+        dialog.remove();
+    });
+    
+    // Chiudi anche cliccando sullo sfondo
+    dialog.addEventListener('click', (e) => {
+        if (e.target === dialog) {
+            dialog.remove();
+        }
+    });
+    
+    // Auto-chiudi dopo 5 secondi
+    setTimeout(() => {
+        if (dialog.parentElement) {
+            dialog.remove();
+        }
+    }, 5000);
+}
 });
 
 

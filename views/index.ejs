@@ -54,16 +54,16 @@
 <!-- Hero Section with Image Slider -->
 <section class="hero" id="home">
     <div class="hero-slider">
-        <div class="slide active" data-bg="/images/hero-1.jpg">
+        <div class="slide active" data-bg="/images/char-jardin-1.jpg">
             <div class="slide-overlay"></div>
         </div>
-        <div class="slide" data-bg="/images/hero-2.jpg">
+        <div class="slide" data-bg="/images/giardino-giapponese-8.jpg">
             <div class="slide-overlay"></div>
         </div>
-        <div class="slide" data-bg="/images/hero-3.jpg">
+        <div class="slide" data-bg="/images/locale-commerciale-1.jpg">
             <div class="slide-overlay"></div>
         </div>
-        <div class="slide" data-bg="/images/hero-4.jpg">
+        <div class="slide" data-bg="/images/giardino-giapponese-5.jpg">
             <div class="slide-overlay"></div>
         </div>
     </div>
@@ -179,7 +179,6 @@
             <div class="project-info">
                 <div class="project-info-scroll">
                     <h2 id="projectTitle">Titolo immagine.</h2>
-                    <h5 id="projectSubtitle">Sottotitolo immagine.</h5>
                     <p id="projectDescription" class="project-description">Descrivi l'immagine qui.</p>
                     
                     <!-- Project Details Grid -->
@@ -192,6 +191,18 @@
                         <div class="detail-item">
                             <span class="detail-label">DATA</span>
                             <span class="detail-value" id="projectYear">—</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">TIPOLOGIA</span>
+                            <span class="detail-value" id="projectType">—</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">COLLABORAZIONE</span>
+                            <span class="detail-value" id="projectCollab">—</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">ESITO</span>
+                            <span class="detail-value" id="projectStatus">—</span>
                         </div>
                        
                     </div>
@@ -214,7 +225,7 @@
                     <p class="contact-description"><%= data.contact_section.description %></p>
                 </div>
                 
-                <form class="contact-form" id="contactForm">
+                <!-- <form class="contact-form" id="contactForm">
                     <div class="form-group">
                         <input type="text" id="fullName" name="fullName" placeholder="Nome completo*" required>
                     </div>
@@ -233,7 +244,7 @@
                     </div>
                     
                     <button type="submit" class="btn-submit">INVIA</button>
-                </form>
+                </form> -->
             </div>
             
             <!-- Contact Info -->
@@ -260,7 +271,8 @@
                         </div>
                         <div class="contact-info-text">
                             <h3>EMAIL:</h3>
-                            <p id="email_info"><%= data.contacts.email %></p>
+                            
+                            <p id="email_info"><a href="mailto:<%= data.contacts.email %>?subject=From:Portfolio-architettogiovannaplomitallo.it&body=Ciao, ti contatto per..."><%= data.contacts.email %></a></p>
                         </div>
                     </div>
                     

@@ -1,5 +1,5 @@
 {
-    "siteTitle": "Giovanna E. Plomitallo - Architetto",
+    "siteTitle": "Architetto Giovanna Plomitallo",
   "hero": {
     "title": "PERSONALIZE AND CUSTOMIZE"
   },
@@ -18,7 +18,7 @@
   "contact_section": {
     "sectionLabel": "— RESTIAMO IN CONTATTO",
     "title": "Contattami",
-    "description": "Hai qualche domanda o vuoi ricevere il mio Curriculum Vitae? Contattami."
+    "description": "Hai qualche domanda o vuoi ricevere il mio Curriculum Vitae? Contattami attraverso uno dei seguenti link."
   },
 "slideData": [
         {
@@ -39,76 +39,152 @@
         }
     ],
     "projects": [
-                {
-            "data": "Marzo 2022",
-            "location": "Capua (CE)",
-            "id": 1,
-            "title": "Progetto Residenziale",
-            "subtitle": "Villa moderna con design sostenibile",
+        {
+            "data": "2024",
+            "location": "Francia",
+            "id": 8,
+            "title": "Cher Jardin Prends Soin De Moi",
+            "images": ["\\images\\char-jardin-1.jpg", "\\images\\char-jardin-2.jpg", "\\images\\char-jardin-3.jpg", "\\images\\char-jardin-4.jpg",
+            "\\images\\char-jardin-5.jpg",
+            "\\images\\char-jardin-6.jpg",
+            "\\images\\char-jardin-7.jpg",
+            "\\images\\char-jardin-8.jpg",
+            "\\images\\char-jardin-9.jpg",
+            "\\images\\char-jardin-10.jpg",
+            "\\images\\char-jardin-11.jpg",
+            "\\images\\char-jardin-12.jpg"
+                          ],
+            "description": [
+                "“CHER JARDIN PRENDS SOIN DE MOI” è il progetto presentato da Aprus Landscape Architecture & People e selezionato per l’edizione 2024 del Festival International des Jardins – Chaumont-sur-Loire (Francia). Il giardino offre un’esperienza immersiva nel rapporto simbiotico tra mondo vegetale e animale. Un percorso in legno di paulownia conduce il visitatore attraverso una galleria di Phyllostachys aureosulcata che cela la vista dell’elemento centrale, un nido di Salix alba, simbolo del grembo materno dove tutto prende vita, luogo prenatale, rifugio e conforto: qui troviamo l’acqua, anch’essa a rappresentare l’essenza della vita, fonte e origine di ogni forma animata. Il nido è adagiato in un letto di piante aromatiche, profumate e amiche delle api.   L’acqua è richiamata anche nei ponds, microstagni con ninfee, iris e piante acquatiche, habitat ideale di una miriade di invertebrati.  Un boschetto di Corylus avellana contorta e Quercus ilex rivela la vita nascosta nel suolo, mentre legno e residui vegetali diventano risorse per insetti decompositori. In questo angolo ombroso del giardino sono ricreate le condizioni pedo climatiche per l’instaurarsi di fungaie.  Completano il progetto antichi alberi da frutto e orti affiancati a una compostiera, simbolo di un ciclo naturale continuo tra produzione, consumo e rigenerazione."],
+            "type": "-",
+            "collaboration": "Studio APRUS - Landscape Architecture & People",
+            "status": "Progetto selezionato e realizzato"
+             },
+        {
+            "data": "2025",
+            "location": "-",
+            "id": 9,
+            "title": "Vivere in piccolo: concept di micro-abitazione con tetto a falde",
+            "images": ["\\images\\vivere-in-piccolo-1.jpg", "\\images\\vivere-in-piccolo-2.jpg", "\\images\\vivere-in-piccolo-3.jpg"
+                          ],
+            "description": [
+                "Il progetto esplora l’organizzazione degli spazi di una micro-abitazione di 30 mq, con l’obiettivo di integrare zona giorno, lavanderia, bagno e camera da letto in un layout efficiente e funzionale. Sono state sviluppate due soluzioni distributive: Layout 1: ingresso dal lato corto su open space con cucina a penisola, soggiorno e area pranzo; un disimpegno conduce a bagno, lavanderia e camera con cabina armadio e piccolo studio. Layout 2: ingresso centrale sul lato lungo; la zona giorno si sviluppa da un lato, mentre dall’altro un disimpegno distribuisce lavanderia, bagno e camera con angolo studio."],
+            "type": "-",
+            "collaboration": "Studio APRUS - Landscape Architecture & People",
+            "status": "-"
+             },
+        
+        {
+            "data": "2024",
+            "location": "-",
+            "id": 7,
+            "title": "PAREIDOLIA",
+            "images": ["\\images\\pareidolia-1.jpg", "\\images\\pareidolia-2.jpg", "\\images\\pareidolia-3.jpg", "\\images\\pareidolia-4.jpg", "\\images\\pareidolia-5.jpg"
+                          ],
+            "description": [
+                "Il progetto è stato presentato al concorso di idee di Radicepura Garden Festival 2024. Il giardino interpreta il tema “Ordine e Caos” alternando aree organizzate e zone di crescita spontanea. Stanze verdi definite da linee curve accolgono specie tropicali, mentre la macchia mediterranea si espande liberamente senza confini precisi. Il percorso non ha un inizio né una fine: il visitatore è guidato dalla vegetazione stessa, libero di scegliere la propria direzione. Porzioni di mura, colonizzate da Hedera canariensis e Passiflora caerulea, rappresentano il tentativo dell’uomo di controllare la natura, che tuttavia tende a riprendersi gli spazi. La verticalità degli alberi e l’intreccio di fili colorati filtrano la luce, creando giochi di ombre che evocano al tempo stesso disorientamento e calma."],
+            "type": "Radicepura Garden Festival – Concorso Internazionale (2024)",
+            "collaboration": "Studio APRUS - Landscape Architecture & People",
+            "status": "Progetto presentato (non selezionato)"
+             },
+        {
+            "data": "2024",
+            "location": "-",
+            "id": 6,
+            "title": "Progettazione di un giardino in stile giapponese",
             "images": [
-                "\\images\\hero-1.jpg",
-                "\\images\\hero-2.jpg","\\images\\hero-3.jpg"
-            ],
+                  "\\images\\giardino-giapponese-1.jpg",
+                "\\images\\giardino-giapponese-2.jpg",
+            "\\images\\giardino-giapponese-3.jpg",
+        "\\images\\giardino-giapponese-4.jpg",
+    "\\images\\giardino-giapponese-5.jpg",
+"\\images\\giardino-giapponese-6.jpg",
+"\\images\\giardino-giapponese-7.jpg","\\images\\giardino-giapponese-8.jpg",
+"\\images\\giardino-giapponese-9.jpg",
+"\\images\\giardino-giapponese-10.jpg", "\\images\\giardino-giapponese-11.jpg"           ],
             "description": [
-                "Progettazione di una torre per uffici all'avanguardia con certificazione LEED, che integra soluzioni sostenibili e tecnologie innovative per creare un ambiente di lavoro efficiente e rispettoso dell'ambiente.",
-                "Il progetto include spazi flessibili, aree verdi e sistemi energetici avanzati per ridurre l'impatto ambientale e migliorare il benessere dei dipendenti."
-            ]
-        },
-        {
-            "data": "Marzo 2022",
-            "location": "Capua (CE)",
-            "id": 1,
-            "title": "Progetto Residenziale",
-            "subtitle": "Villa moderna con design sostenibile",
+                "Progetto di un giardino in stile giapponese realizzato per una residenza privata. Il giardino è organizzato in due aree separate da un divisorio in canne di bamboo: una zona senza prato, definita da acciottolato e bambù, con essenze come Acer palmatum, Phyllostachys e Prunus serrulata; e una seconda zona a prato che ospita il laghetto e un’area relax con pergola e idromassaggio, arricchita da specie come Salix babylonica, Magnolia e Cedrus deodara. La progettazione unisce estetica giapponese e funzionalità, rispondendo alle esigenze del proprietario e del suo spazio privato."],
+            "type": "-",
+            "collaboration": "Studio APRUS - Landscape Architecture & People",
+            "status": "-"
+             },
+         {
+            "data": "2023",
+            "location": "-",
+            "id": 5,
+            "title": "Progettazione di spazi esterni dedicati a sport e convivialità",
             "images": [
-                "\\images\\hero-1.jpg",
-                "\\images\\hero-2.jpg","\\images\\hero-3.jpg"
-            ],
+                 "\\images\\spazio-esterno-sport-2.jpg", "\\images\\spazio-esterno-sport-1.jpg", "\\images\\spazio-esterno-sport-3.jpg", "\\images\\spazio-esterno-sport-4.jpg", "\\images\\spazio-esterno-sport-5.jpg", "\\images\\spazio-esterno-sport-6.jpg", "\\images\\spazio-esterno-sport-7.jpg", "\\images\\spazio-esterno-sport-8.jpg", "\\images\\spazio-esterno-sport-9.jpg", "\\images\\spazio-esterno-sport-10.jpg"             ],
             "description": [
-                "Progettazione di una torre per uffici all'avanguardia con certificazione LEED, che integra soluzioni sostenibili e tecnologie innovative per creare un ambiente di lavoro efficiente e rispettoso dell'ambiente.",
-                "Il progetto include spazi flessibili, aree verdi e sistemi energetici avanzati per ridurre l'impatto ambientale e migliorare il benessere dei dipendenti."
-            ]
-        },
-        {
-                        "data": "Marzo 2023",
-            "location": "Caserta (CE)",
-            "id": 2,
-            "title": "Centro Commerciale",
-            "subtitle": "Spazio commerciale innovativo",
-            "images": ["\\images\\hero-2.jpg"],
-            "description": [
-                "Progettazione di una torre per uffici all'avanguardia con certificazione LEED, che integra soluzioni sostenibili e tecnologie innovative per creare un ambiente di lavoro efficiente e rispettoso dell'ambiente.",
-                "Il progetto include spazi flessibili, aree verdi e sistemi energetici avanzati per ridurre l'impatto ambientale e migliorare il benessere dei dipendenti."
-            ]
-        },
-        {
-                        "data": "Marzo 2024",
-            "location": "Napoli (CE)",
-            "id": 3,
-            "title": "Uffici Corporate",
-            "subtitle": "Torre per uffici con certificazione LEED",
-            "images": ["\\images\\hero-3.jpg"],
-            "description": [
-                "Progettazione di una torre per uffici all'avanguardia con certificazione LEED, che integra soluzioni sostenibili e tecnologie innovative per creare un ambiente di lavoro efficiente e rispettoso dell'ambiente.",
-                "Il progetto include spazi flessibili, aree verdi e sistemi energetici avanzati per ridurre l'impatto ambientale e migliorare il benessere dei dipendenti."
-            ]
-        },
-        {
-                        "data": "Marzo 2025",
-            "location": "Capua (CE)",
+                "L’intervento ha l’obiettivo di riqualificare il parco giardino di una villa privata, trasformandolo in uno spazio dedicato al benessere, allo sport e alla convivialità familiare. Il campo da tennis è stato completamente riprogettato e ricostruito sul sedime di un vecchio campo dismesso. Per gestire la scarpata e ottenere una naturale integrazione con il paesaggio, è stata realizzata una scogliera in blocchi di travertino, creando al contempo degli spalti verdi. In prossimità dell’abitazione sono state progettate una zona fitness e un’area giochi, mentre nello spazio conviviale trova posto una cucina all’aperto, pensata per momenti di socialità e condivisione."],
+            "type": "-",
+            "collaboration": "Studio APRUS - Landscape Architecture & People",
+            "status": "-"
+             },
+         {
+            "data": "2023",
+            "location": "-",
             "id": 4,
-            "title": "A Corporate",
-            "subtitle": "Mensa per uffici con certificazione LEED",
-            "images": ["\\images\\hero-4.jpg"],
+            "title": "Rinnovare lo spazio: trasformazione di locali commerciali",
+            "images": [
+                  "\\images\\locale-commerciale-1.jpg",  "\\images\\locale-commerciale-3.jpg", "\\images\\locale-commerciale-4.png", "\\images\\locale-commerciale-5.png", "\\images\\locale-commerciale-6.png" 
+            ],
             "description": [
-                "Progettazione di una torre per uffici all'avanguardia con certificazione LEED, che integra soluzioni sostenibili e tecnologie innovative per creare un ambiente di lavoro efficiente e rispettoso dell'ambiente.",
-                "Il progetto include spazi flessibili, aree verdi e sistemi energetici avanzati per ridurre l'impatto ambientale e migliorare il benessere dei dipendenti."
-            ]
-        }
+                "Il progetto riguarda la riqualificazione degli spazi interni di un edificio, adibito a magazzino e punto vendita, attraverso una nuova organizzazione funzionale degli ambienti. L’obiettivo è realizzare un’area adibita ad ufficio e un’area dedicata agli spogliatoi, migliorando la fruibilità e la qualità degli spazi, rendendoli più funzionali, accoglienti e luminosi. All’interno dell’ufficio, lo spazio è suddiviso in un’area di accoglienza e un’area operativa: le due zone fanno parte di un unico ambiente ma sono visivamente separate da listelli metallici, che definiscono i volumi senza creare barriere chiuse."],
+            "type": "-",
+            "collaboration": "Studio APRUS - Landscape Architecture & People",
+            "status": "-"
+             },
+
+        {
+            "data": "2022",
+            "location": "-",
+            "id": 3,
+            "title": "Terrazza verde: progettazione di uno spazio all’aperto",
+            "images": [
+                  "\\images\\terrazza-verde-3.jpg", "\\images\\terrazza-verde-4.jpg", "\\images\\terrazza-verde-1.jpg", "\\images\\terrazza-verde-2.jpg"
+            ],
+            "description": [
+                "Il progetto riguarda la riqualificazione di un terrazzo di circa 70 mq, organizzato in due aree principali. La prima è dedicata al pranzo e si accede direttamente dalla cucina; è caratterizzata da una pergotenda con tavolo e sedie. La seconda area è destinata al relax, definita da una pedana in legno, panche alternate a fioriere quadrate e un divano con tavolino centrale. Le fioriere, di diverse dimensioni e altezze, definiscono e separano gli spazi, contribuendo a creare un senso di ordine e armonia. Lungo tutto il perimetro del terrazzo, piante alte come Phyllostachys, Thuja occidentalis e Malus garantiscono privacy e comfort, mentre specie più basse come Buxus sempervirens, Nepeta x faassenii, Vinca minor e Salvia, introducono colore, texture e movimento, arricchendo l’esperienza sensoriale dello spazio."],
+            "type": "-",
+            "collaboration": "Studio APRUS - Landscape Architecture & People",
+            "status": "-"
+             },
+
+        {
+            "data": "2022",
+            "location": "-",
+            "id": 1,
+            "title": "Studio del layout interno di quattro appartamenti per struttura ricettiva",
+            "images": [
+                "\\images\\layoyt-interno-appartamenti-1.jpg", "\\images\\layoyt-interno-appartamenti-2.jpg", "\\images\\layoyt-interno-appartamenti-3.jpg", "\\images\\layoyt-interno-appartamenti-4.jpg"
+            ],
+            "description": [
+                "Il progetto riguarda la definizione e l’organizzazione degli spazi interni di quattro appartamenti destinati ad una struttura ricettiva. L’obiettivo è stato ottimizzare le superfici disponibili valorizzando comfort, funzionalità e privacy degli ospiti. Ogni unità è stata progettata con un layout fluido e razionale, in cui zona giorno, servizi e area notte dialogano in modo armonico. Parallelamente alla progettazione degli interni è stato realizzato uno studio cromatico: una palette ispirata a tonalità naturali contribuisce a creare atmosfere rilassanti e accoglienti, trasformando gli appartamenti in luoghi in cui sentirsi a casa."],
+            "type": "-",
+            "collaboration": "Studio APRUS - Landscape Architecture & People",
+            "status": "-"
+             },
+                {
+            "data": "2022",
+            "location": "-",
+            "id": 2,
+            "title": "AETHER E TERRA",
+            "images": [
+                "\\images\\aethereeterra-1.jpg",
+                "\\images\\aethereeterra-2.jpg","\\images\\aethereeterra-3.jpg"
+            ],
+            "description": [
+                "Il progetto nasce come risposta al tema del Radicepura Garden Festival 2022, dedicato alla relazione tra paesaggio mediterraneo, sostenibilità e nuovi modelli di fruizione degli spazi aperti. In collaborazione con lo Studio APRUS, ho contribuito alla definizione del concept, allo sviluppo progettuale e alla rappresentazione grafica. Il progetto “Aethere e terra” interpreta la teoria aristotelica dei cinque elementi, trasformando il percorso del visitatore in una sequenza esperienziale. Il giardino si articola in quattro ambienti, Fuoco, Aria, Acqua e Terra, disposti lungo un percorso circolare che rappresenta il moto dell’Etere, elemento generato dall’equilibrio degli altri quattro. Ogni spazio è definito da specifiche essenze botaniche, palette cromatiche e materiali: il Fuoco utilizza colori caldi e forme verticali, l’Aria si esprime attraverso leggerezza e movimento, l’Acqua predilige forme morbide e vegetazione umida, mentre la Terra accoglie specie radicate e solide. L’insieme costruisce un giardino narrativo e sensoriale, in cui la vegetazione guida la percezione e racconta la trasformazione degli elementi."],
+            "type": "Radicepura Garden Festival - Concorso Internazionale (2022) ",
+            "collaboration": "Studio APRUS - Landscape Architecture & People",
+            "status": "Progetto presentato (non selezionato)"
+             }
+       
     ],
     "contacts": {
-        "email": "prova@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/prova/",
-        "address": "Capua (CE), Italia"
+        "email": "giovanna-plomitallo@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/giovanna-plomitallo-00a814170/",
+        "address": "Caserta (CE), Italia"
     }
 }  

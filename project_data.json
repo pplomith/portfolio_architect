@@ -22,20 +22,20 @@
   },
 "slideData": [
         {
-            "title": "PERSONALIZE AND CUSTOMIZE",
-            "subtitle": "Creating extraordinary architectural experiences"
+            "title": "",
+            "subtitle": ""
         },
         {
-            "title": "INNOVATIVE DESIGN",
-            "subtitle": "Pushing boundaries in modern architecture"
+            "title": "",
+            "subtitle": ""
         },
         {
-            "title": "SUSTAINABLE ARCHITECTURE",
-            "subtitle": "Building for a better tomorrow"
+            "title": "",
+            "subtitle": ""
         },
         {
-            "title": "LUXURY LIVING SPACES",
-            "subtitle": "Where elegance meets functionality"
+            "title": "",
+            "subtitle": ""
         }
     ],
     "projects": [
@@ -127,7 +127,7 @@
             "id": 4,
             "title": "Rinnovare lo spazio: trasformazione di locali commerciali",
             "images": [
-                  "\\images\\locale-commerciale-1.jpg", "\\images\\locale-commerciale-2.jpg",  "\\images\\locale-commerciale-3.jpg", "\\images\\locale-commerciale-4.png", "\\images\\locale-commerciale-5.png", "\\images\\locale-commerciale-6.png" 
+                  "\\images\\locale-commerciale-1.jpg", "\\images\\locale-commerciale-2.jpeg",  "\\images\\locale-commerciale-3.jpg", "\\images\\locale-commerciale-4.png", "\\images\\locale-commerciale-5.png", "\\images\\locale-commerciale-6.png" 
             ],
             "description": [
                 "Il progetto riguarda la riqualificazione degli spazi interni di un edificio, adibito a magazzino e punto vendita, attraverso una nuova organizzazione funzionale degli ambienti. L’obiettivo è realizzare un’area adibita ad ufficio e un’area dedicata agli spogliatoi, migliorando la fruibilità e la qualità degli spazi, rendendoli più funzionali, accoglienti e luminosi. All’interno dell’ufficio, lo spazio è suddiviso in un’area di accoglienza e un’area operativa: le due zone fanno parte di un unico ambiente ma sono visivamente separate da listelli metallici, che definiscono i volumi senza creare barriere chiuse."],

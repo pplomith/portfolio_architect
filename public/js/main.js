@@ -130,6 +130,65 @@ if (heroSection) {
     });
 }
 
+// Swipe support (Pointer Events)
+let startX = 0;
+let startY = 0;
+let swiping = false;
+
+const SWIPE_X_THRESHOLD = 50;   // pixel minimi in orizzontale per considerare lo swipe
+const SWIPE_Y_TOLERANCE = 40;   // tolleranza verticale per non interferire con lo scroll
+
+if (heroSection) {
+  // Gestione inizio swipe
+  heroSection.addEventListener('pointerdown', (e) => {
+    // Limita a touch/pen (evita click mouse)
+    if (e.pointerType !== 'touch' && e.pointerType !== 'pen') return;
+    swiping = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    stopAutoplay();
+  });
+
+  // Durante lo swipe
+  heroSection.addEventListener('pointermove', (e) => {
+    if (!swiping) return;
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    // Se il movimento è prevalentemente orizzontale, opzionalmente si può prevenire il default
+    // ma con touch-action: pan-y non è necessario.
+    // if (Math.abs(dx) > Math.abs(dy) && Math.abs(dy) < SWIPE_Y_TOLERANCE) {
+    //   e.preventDefault(); // per usarlo, registra il listener con {passive:false}
+    // }
+  });
+
+  // Fine swipe
+  const endSwipe = (e) => {
+    if (!swiping) return;
+    swiping = false;
+
+    const dx = e.clientX - startX;
+    const dy = e.clientY - startY;
+
+    // Cambia slide solo se lo swipe è orizzontale e supera la soglia
+    if (Math.abs(dy) < SWIPE_Y_TOLERANCE && Math.abs(dx) > SWIPE_X_THRESHOLD) {
+      if (dx < 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
+    startAutoplay();
+  };
+
+  heroSection.addEventListener('pointerup', endSwipe);
+  heroSection.addEventListener('pointercancel', () => {
+    swiping = false;
+    startAutoplay();
+  });
+}
+
+
     // Initialize the slider
     initSlider();
 
@@ -181,18 +240,7 @@ if (heroSection) {
             updateLoadMoreButton();
             
             // Smooth scroll verso i nuovi progetti
-            setTimeout(() => {
-                const portfolioGrid = document.getElementById('portfolioGrid');
-                const newItems = portfolioGrid.querySelectorAll('.portfolio-item');
-                const lastOldItem = newItems[newItems.length - projectsPerPage - 1];
-                
-                if (lastOldItem) {
-                    lastOldItem.scrollIntoView({ 
-                        behavior: 'smooth', 
-                        block: 'nearest' 
-                    });
-                }
-            }, 100);
+            
         });
     }
     async function loadProjects() {

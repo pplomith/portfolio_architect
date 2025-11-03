@@ -228,6 +228,10 @@ header {
     color: var(--accent-color);
     padding-left: 10px;
 }
+.hero,
+.hero-slider {
+  touch-action: pan-y;
+}
 /* Hero Section with Slider */
 .hero {
     height: 100vh;

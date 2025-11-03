@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     let currentSlide = 0;
     let slideInterval;
+
+    
     
 
     // Initialize slider

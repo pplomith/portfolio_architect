@@ -88,6 +88,7 @@ header {
     padding: 0;
     backdrop-filter: blur(10px);
     transition: var(--transition);
+    height: 60px;
 }
 
 .logo {
@@ -192,17 +193,23 @@ header {
 
 .nav-menu {
     position: fixed;
-    top: 75px;
-    right: -300px;
+    top: 60px;
+    right: 0;
     width: 300px;
     height: calc(100vh - 75px);
     background: rgba(44, 44, 44, 0.95);
     backdrop-filter: blur(20px);
     transition: var(--transition);
+      opacity: 0;
+        visibility: hidden;
+
 }
 
 .nav-menu.active {
-    right: 0;
+    opacity: 1;
+visibility: visible;
+
+    
 }
 
 .nav-menu ul {
@@ -1364,9 +1371,18 @@ footer {
     margin: 0;
 }
 .logo-img {
-    padding: 20px;
-    max-width: 70px;
-    border-radius: 23px;
+    /* padding: 20px; */
+    max-height: 90%;
+    /* max-width: 70px; */
+    border-radius: 3px;
+}
+
+.container-img {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 /* Header - Correzioni per mobile */

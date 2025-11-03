@@ -1366,6 +1366,7 @@ footer {
 .logo-img {
     padding: 20px;
     max-width: 70px;
+    border-radius: 23px;
 }
 
 /* Header - Correzioni per mobile */

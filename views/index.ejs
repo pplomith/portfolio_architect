@@ -174,7 +174,6 @@ Vedi progetti<span class=arrow>⟶</span>
 <p class=contact-description><%= data.contact_section.description %></p>
 </div>
 <form class=contact-form id=contactForm>
-<input type=hidden id=emailTo name=emailTo value="<%= data.contacts.email %>">
 <div class=form-group>
 <input id=fullName name=fullName placeholder="Nome completo*" required>
 </div>
@@ -188,6 +187,7 @@ Vedi progetti<span class=arrow>⟶</span>
 <input type=checkbox id=privacy name=privacy required>
 <label for=privacy>Verrà richiesta l'apertura dell'applicazione email predefinita. Cliccando Invia accetta l'apertura.</label>
 </div>
+<input type=hidden id=emailTo name=emailTo value="<%= data.contacts.email %>">
 <button type=submit class=btn-submit>INVIA</button>
 </form>
 </div>

@@ -3,3 +3,7 @@ build
 npm-debug.log
 .env
 .DS_Store
+serverdev.js
+public/js/maindev.js
+public/css/styledev.css
+views/indexdev.ejs

@@ -18,7 +18,7 @@
   "contact_section": {
     "sectionLabel": "— RESTIAMO IN CONTATTO",
     "title": "Contattami",
-    "description": "Hai qualche domanda o vuoi ricevere il mio Curriculum Vitae? Contattami attraverso uno dei seguenti link."
+    "description": "Hai una proposta di progetto o vuoi ricevere il mio Curriculum Vitae? Contattami attraverso la seguente form."
   },
 "slideData": [
         {
@@ -183,7 +183,7 @@
        
     ],
     "contacts": {
-        "email": "giovanna-plomitallo@gmail.com",
+        "email": "giovanna.plomitallo@gmail.com",
         "linkedin": "https://www.linkedin.com/in/giovanna-plomitallo-00a814170/",
         "address": "Caserta (CE), Italia"
     }

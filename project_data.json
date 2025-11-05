@@ -7,8 +7,7 @@
     "sectionLabel": "— CHI SONO",
     "title": "About Me",
     "paragraphs": [
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget massa quam enim cursus. Egestas maecenas pharetra, amet, sed dui. Nunc, viverra donec in amet, sed.",
-            "Commodo vivera eu volutpat amet, leo non senectus odio dolor. Id at urna non porttitor elementum. Viverra senectus dui ultricies dolor."
+            "Sono Giovanna Emanuela Plomitallo, un architetto e mi occupo di progettazione architettonica e interior design, con particolare attenzione alla funzionalità degli spazi e alla qualità estetica degli ambienti. Progetto spazi interni ed esterni (come terrazzi e giardini di piccole dimensioni), valorizzando ogni metro quadrato attraverso soluzioni su misura e studiando la migliore relazione tra luce, materiali e arredo. Il mio approccio è orientato all’ottimizzazione degli spazi, trasformandoli in ambienti accoglienti, efficienti e armoniosi. Mi dedico anche al restyling di case e spazi esistenti, intervenendo con soluzioni mirate che migliorano la fruibilità senza stravolgere l’esistente, quando non necessario. Seguo il progetto in tutte le sue fasi: * Progetto preliminare e definitivo\n* Progetto esecutivo\n* Gestione delle pratiche edilizie e della documentazione tecnica\n*Redazione di computi metrici e coordinamento con le imprese. Il mio obiettivo è accompagnare il cliente attraverso un percorso chiaro e guidato, dalla prima idea fino alla realizzazione finale, trasformando ogni spazio in un luogo che rispecchi esigenze e identità di chi lo vive."
         ]
   },
   "project": {
@@ -73,29 +72,15 @@
             "collaboration": "Studio APRUS - Landscape Architecture & People",
             "status": "-"
              },
-        
-        {
-            "data": "2024",
-            "location": "-",
-            "id": 7,
-            "title": "PAREIDOLIA",
-            "images": ["\\images\\pareidolia-1.jpg", "\\images\\pareidolia-2.jpg", "\\images\\pareidolia-3.jpg", "\\images\\pareidolia-4.jpg", "\\images\\pareidolia-5.jpg"
-                          ],
-            "description": [
-                "Il progetto è stato presentato al concorso di idee di Radicepura Garden Festival 2024. Il giardino interpreta il tema “Ordine e Caos” alternando aree organizzate e zone di crescita spontanea. Stanze verdi definite da linee curve accolgono specie tropicali, mentre la macchia mediterranea si espande liberamente senza confini precisi. Il percorso non ha un inizio né una fine: il visitatore è guidato dalla vegetazione stessa, libero di scegliere la propria direzione. Porzioni di mura, colonizzate da Hedera canariensis e Passiflora caerulea, rappresentano il tentativo dell’uomo di controllare la natura, che tuttavia tende a riprendersi gli spazi. La verticalità degli alberi e l’intreccio di fili colorati filtrano la luce, creando giochi di ombre che evocano al tempo stesso disorientamento e calma."],
-            "type": "Radicepura Garden Festival – Concorso Internazionale (2024)",
-            "collaboration": "Studio APRUS - Landscape Architecture & People",
-            "status": "Progetto presentato (non selezionato)"
-             },
         {
             "data": "2024",
             "location": "-",
             "id": 6,
             "title": "Progettazione di un giardino in stile giapponese",
             "images": [
-                  "\\images\\giardino-giapponese-1.jpg",
+                "\\images\\giardino-giapponese-3.jpg",  
+                "\\images\\giardino-giapponese-1.jpg",
                 "\\images\\giardino-giapponese-2.jpg",
-            "\\images\\giardino-giapponese-3.jpg",
         "\\images\\giardino-giapponese-4.jpg",
     "\\images\\giardino-giapponese-5.jpg",
 "\\images\\giardino-giapponese-6.jpg",
@@ -108,26 +93,14 @@
             "collaboration": "Studio APRUS - Landscape Architecture & People",
             "status": "-"
              },
-         {
-            "data": "2023",
-            "location": "-",
-            "id": 5,
-            "title": "Progettazione di spazi esterni dedicati a sport e convivialità",
-            "images": [
-                 "\\images\\spazio-esterno-sport-2.jpg", "\\images\\spazio-esterno-sport-1.jpg", "\\images\\spazio-esterno-sport-3.jpg", "\\images\\spazio-esterno-sport-4.jpg", "\\images\\spazio-esterno-sport-5.jpg", "\\images\\spazio-esterno-sport-6.jpg", "\\images\\spazio-esterno-sport-7.jpg", "\\images\\spazio-esterno-sport-8.jpg", "\\images\\spazio-esterno-sport-9.jpg", "\\images\\spazio-esterno-sport-10.jpg"             ],
-            "description": [
-                "L’intervento ha l’obiettivo di riqualificare il parco giardino di una villa privata, trasformandolo in uno spazio dedicato al benessere, allo sport e alla convivialità familiare. Il campo da tennis è stato completamente riprogettato e ricostruito sul sedime di un vecchio campo dismesso. Per gestire la scarpata e ottenere una naturale integrazione con il paesaggio, è stata realizzata una scogliera in blocchi di travertino, creando al contempo degli spalti verdi. In prossimità dell’abitazione sono state progettate una zona fitness e un’area giochi, mentre nello spazio conviviale trova posto una cucina all’aperto, pensata per momenti di socialità e condivisione."],
-            "type": "-",
-            "collaboration": "Studio APRUS - Landscape Architecture & People",
-            "status": "-"
-             },
+    
          {
             "data": "2023",
             "location": "-",
             "id": 4,
             "title": "Rinnovare lo spazio: trasformazione di locali commerciali",
             "images": [
-                  "\\images\\locale-commerciale-1.jpg", "\\images\\locale-commerciale-2.jpeg",  "\\images\\locale-commerciale-3.jpg", "\\images\\locale-commerciale-4.png", "\\images\\locale-commerciale-5.png", "\\images\\locale-commerciale-6.png" 
+                  "\\images\\locale-commerciale-1.jpeg", "\\images\\locale-commerciale-2.jpeg",  "\\images\\locale-commerciale-3.jpeg", "\\images\\locale-commerciale-4.jpeg", "\\images\\locale-commerciale-5.jpeg", "\\images\\locale-commerciale-6.jpeg", "\\images\\locale-commerciale-7.jpeg" 
             ],
             "description": [
                 "Il progetto riguarda la riqualificazione degli spazi interni di un edificio, adibito a magazzino e punto vendita, attraverso una nuova organizzazione funzionale degli ambienti. L’obiettivo è realizzare un’area adibita ad ufficio e un’area dedicata agli spogliatoi, migliorando la fruibilità e la qualità degli spazi, rendendoli più funzionali, accoglienti e luminosi. All’interno dell’ufficio, lo spazio è suddiviso in un’area di accoglienza e un’area operativa: le due zone fanno parte di un unico ambiente ma sono visivamente separate da listelli metallici, che definiscono i volumi senza creare barriere chiuse."],
@@ -142,7 +115,7 @@
             "id": 3,
             "title": "Terrazza verde: progettazione di uno spazio all’aperto",
             "images": [
-                  "\\images\\terrazza-verde-3.jpg", "\\images\\terrazza-verde-4.jpg", "\\images\\terrazza-verde-1.jpg", "\\images\\terrazza-verde-2.jpg"
+                   "\\images\\terrazza-verde-1.jpeg", "\\images\\terrazza-verde-2.jpeg", "\\images\\terrazza-verde-3.jpeg", "\\images\\terrazza-verde-4.jpeg"
             ],
             "description": [
                 "Il progetto riguarda la riqualificazione di un terrazzo di circa 70 mq, organizzato in due aree principali. La prima è dedicata al pranzo e si accede direttamente dalla cucina; è caratterizzata da una pergotenda con tavolo e sedie. La seconda area è destinata al relax, definita da una pedana in legno, panche alternate a fioriere quadrate e un divano con tavolino centrale. Le fioriere, di diverse dimensioni e altezze, definiscono e separano gli spazi, contribuendo a creare un senso di ordine e armonia. Lungo tutto il perimetro del terrazzo, piante alte come Phyllostachys, Thuja occidentalis e Malus garantiscono privacy e comfort, mentre specie più basse come Buxus sempervirens, Nepeta x faassenii, Vinca minor e Salvia, introducono colore, texture e movimento, arricchendo l’esperienza sensoriale dello spazio."],
@@ -164,6 +137,19 @@
             "type": "-",
             "collaboration": "Studio APRUS - Landscape Architecture & People",
             "status": "-"
+             },
+             {
+            "data": "2024",
+            "location": "-",
+            "id": 7,
+            "title": "PAREIDOLIA",
+            "images": [ "\\images\\pareidolia-2.jpg", "\\images\\pareidolia-1.jpg", "\\images\\pareidolia-3.jpg", "\\images\\pareidolia-4.jpg", "\\images\\pareidolia-5.jpg"
+                          ],
+            "description": [
+                "Il progetto è stato presentato al concorso di idee di Radicepura Garden Festival 2024. Il giardino interpreta il tema “Ordine e Caos” alternando aree organizzate e zone di crescita spontanea. Stanze verdi definite da linee curve accolgono specie tropicali, mentre la macchia mediterranea si espande liberamente senza confini precisi. Il percorso non ha un inizio né una fine: il visitatore è guidato dalla vegetazione stessa, libero di scegliere la propria direzione. Porzioni di mura, colonizzate da Hedera canariensis e Passiflora caerulea, rappresentano il tentativo dell’uomo di controllare la natura, che tuttavia tende a riprendersi gli spazi. La verticalità degli alberi e l’intreccio di fili colorati filtrano la luce, creando giochi di ombre che evocano al tempo stesso disorientamento e calma."],
+            "type": "Radicepura Garden Festival – Concorso Internazionale (2024)",
+            "collaboration": "Studio APRUS - Landscape Architecture & People",
+            "status": "Progetto presentato (non selezionato)"
              },
                 {
             "data": "2022",

@@ -11,7 +11,7 @@
         ]
   },
   "project": {
-    "sectionLabel": "— MIEI LAVORI",
+    "sectionLabel": "— I MIEI LAVORI",
     "title": "Progetti"
   },
   "contact_section": {
@@ -21,20 +21,20 @@
   },
 "slideData": [
         {
-            "title": "",
-            "subtitle": ""
+            "title": "Progettazione Contemporanea",
+            "subtitle": "Soluzioni Architettoniche Personalizzate"
         },
         {
-            "title": "",
-            "subtitle": ""
+            "title": "Dove la Visione Prende Forma",
+            "subtitle": "Dal Concept alla Realizzazione"
         },
         {
-            "title": "",
-            "subtitle": ""
+            "title": "Architettura Sostenibile",
+            "subtitle": "Design Innovativo e Consapevole"
         },
         {
-            "title": "",
-            "subtitle": ""
+            "title": "Ambienti che Ispirano",
+            "subtitle": "Spazi Pensati per Chi Li Vive"
         }
     ],
     "projects": [

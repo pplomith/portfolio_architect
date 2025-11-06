@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const helmet = require('helmet');
-
+const nodemailer = require('nodemailer');
 const app = express();
 
 app.use(helmet());  
@@ -27,6 +27,10 @@ app.use(express.urlencoded({ extended: true }));
 // Dati del portfolio
 
 
+app.get('/index', (req, res) => {
+  console.log(req.body);
+  res.render('index', { data: portfolioData });
+});
 // Routes
 app.get('/', (req, res) => {
   res.render('index', { data: portfolioData });
@@ -51,8 +55,19 @@ app.get('/project/:id', (req, res) => {
   }
 });
 
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        type: 'OAuth2',
+        user: process.env.GMAIL_USER,
+        clientId: process.env.GOOGLE_CLIENT_ID,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+        refreshToken: process.env.GOOGLE_REFRESH_TOKEN
+    }
+});
+
 app.post('/api/sendEmail',async  (req, res) => {
-  const { fullName, email, message, privacy } = req.body;
+  const { to, fromEmail, name, subject, message, cc } = req.body;
   console.log(req.body);
   res.json({ success: true, message: 'Email inviata con successo' });
 });

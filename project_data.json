@@ -64,7 +64,7 @@
             "location": "-",
             "id": 9,
             "title": "Vivere in piccolo: concept di micro-abitazione con tetto a falde",
-            "images": ["\\images\\vivere-in-piccolo-1.jpg", "\\images\\vivere-in-piccolo-2.jpg", "\\images\\vivere-in-piccolo-3.jpg"
+            "images": ["\\images\\vivere-in-piccolo-2.jpg", "\\images\\vivere-in-piccolo-3.jpg", "\\images\\vivere-in-piccolo-1.jpg"
                           ],
             "description": [
                 "Il progetto esplora l’organizzazione degli spazi di una micro-abitazione di 30 mq, con l’obiettivo di integrare zona giorno, lavanderia, bagno e camera da letto in un layout efficiente e funzionale. Sono state sviluppate due soluzioni distributive: Layout 1: ingresso dal lato corto su open space con cucina a penisola, soggiorno e area pranzo; un disimpegno conduce a bagno, lavanderia e camera con cabina armadio e piccolo studio. Layout 2: ingresso centrale sul lato lungo; la zona giorno si sviluppa da un lato, mentre dall’altro un disimpegno distribuisce lavanderia, bagno e camera con angolo studio."],
@@ -78,10 +78,11 @@
             "id": 6,
             "title": "Progettazione di un giardino in stile giapponese",
             "images": [
+                "\\images\\giardino-giapponese-4.jpg",
                 "\\images\\giardino-giapponese-3.jpg",  
                 "\\images\\giardino-giapponese-1.jpg",
                 "\\images\\giardino-giapponese-2.jpg",
-        "\\images\\giardino-giapponese-4.jpg",
+        
     "\\images\\giardino-giapponese-5.jpg",
 "\\images\\giardino-giapponese-6.jpg",
 "\\images\\giardino-giapponese-7.jpg","\\images\\giardino-giapponese-8.jpg",

@@ -139,6 +139,7 @@
             "collaboration": "Studio APRUS - Landscape Architecture & People",
             "status": "-"
              },
+             
              {
             "data": "2024",
             "location": "-",
@@ -166,6 +167,24 @@
             "type": "Radicepura Garden Festival - Concorso Internazionale (2022) ",
             "collaboration": "Studio APRUS - Landscape Architecture & People",
             "status": "Progetto presentato (non selezionato)"
+             },
+              {
+            "data": "2018",
+            "location": "-",
+            "id": 10,
+            "title": "Ipotesi di impianto aeroportuale per cargo merci a Grazzanise (CE)",
+            "images": [
+                "\\images\\Portfolio.jpg", "\\images\\Portfolio1.jpg", "\\images\\Portfolio2.jpg","\\images\\Portfolio3.jpg","\\images\\Portfolio4.jpg",
+                "\\images\\Portfolio5.jpg","\\images\\Portfolio6.jpg","\\images\\Portfoliolio7.jpg","\\images\\Portfolio8.jpg",
+                "\\images\\Portfolio9.jpg","\\images\\Portfolio10.jpg","\\images\\Portfolio11.jpg","\\images\\Portfolio12.jpg",
+                "\\images\\Portfolio13.jpg","\\images\\Portfolio14.jpg","\\images\\Portfolio15.jpg","\\images\\Portfolio16.jpg",
+                "\\images\\Portfolio17.jpg","\\images\\Portfolio18.jpg","\\images\\Portfolio19.jpg","\\images\\Portfolio20.jpg"
+            ],
+            "description": [
+                "Il progetto di ipotesi per l'impianto areoportuale di Grazzanise è concepito come nodo di interscambio tra trasporto terrestre e sistema aereo, con funzioni dedicate principalmente al traffico cargo, a piccole rotte e all’aviazione privata.  L’obiettivo prioritario del progetto è la sicurezza: il sistema di controllo degli accessi è concepito fin dall’esterno dell’edificio, per prevenire possibili minacce e garantire massima tutela alle persone. Il terminal è inserito all’interno di un parco, che ha una duplice funzione: migliorare il comfort ambientale e costituire una naturale barriera acustica. Il sistema del verde genera inoltre diverse aree di sosta e relax, trasformando l’aeroporto in uno spazio permeabile e accogliente. L’aerostazione è servita da un percorso viario ad anello a senso unico, su due corsie, che consente l’accesso diretto alle zone delle pre-partenze e degli arrivi. L’edificio presenta una pianta rettangolare ed è caratterizzato da una copertura curvilinea. Le dimensioni principali sono 209 metri di sviluppo frontale e 118 metri in profondità. Arrivi e partenze sono organizzati in un unico grande volume su livelli differenti, per ottimizzare lo spazio ed accentrare le funzioni operative. Al piano inferiore sono collocati gli arrivi; a destra del livello principale si trovano il check-in e le aree dei controlli pre-imbarco, organizzati con una leggera variazione di quota; al piano superiore si sviluppa la zona partenze. Un livello interrato è dedicato allo smistamento e alla movimentazione dei bagagli. Una grande facciata vetrata affaccia sul piazzale aeromobili, garantendo luce naturale e continuità visiva tra interno ed esterno. La luminosità è ulteriormente incrementata dalla presenza di due corti interne, che ospitano vegetazione, spazi relax, attività commerciali e aree di ristoro. Questi elementi contribuiscono a migliorare la qualità dell’esperienza del passeggero, rendendo lo spazio riconoscibile, confortevole e orientato al benessere dell’utente."],
+            "type": "Tesi di Laurea",
+            "collaboration": "-",
+            "status": "-"
              }
        
     ],

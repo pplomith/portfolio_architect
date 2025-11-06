@@ -3,7 +3,8 @@ const path = require('path');
 const helmet = require('helmet');
 const nodemailer = require('nodemailer');
 const app = express();
-
+const dotenv = require('dotenv');
+require('dotenv').config();
 app.use(helmet());  
 const PORT = process.env.PORT || 3000;
 var fs = require('fs');
@@ -28,7 +29,6 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.get('/index', (req, res) => {
-  console.log(req.body);
   res.render('index', { data: portfolioData });
 });
 // Routes
@@ -67,9 +67,42 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/api/sendEmail',async  (req, res) => {
+  try {
   const { to, fromEmail, name, subject, message, cc } = req.body;
   console.log(req.body);
+  console.log('GMAIL_USER:', process.env.GMAIL_USER);
+
+  await transporter.sendMail({
+            from: fromEmail,
+            to: process.env.GMAIL_USER,
+            cc: cc || undefined,
+            subject: subject,
+            html: `
+                <p><strong>Nome:</strong> ${name}</p>
+                <p><strong>Email:</strong> ${fromEmail}</p>
+                <p><strong>Messaggio:</strong></p>
+                <p>${message.replace(/\n/g, '<br>')}</p>
+            `
+        });
+
+        await transporter.sendMail({
+            from: process.env.GMAIL_USER,
+            to: fromEmail,
+            subject: 'Conferma ricezione - Portfolio',
+            html: `
+                <p>Ciao ${name},</p>
+                <p>Abbiamo ricevuto il tuo messaggio. Ti risponderò al più presto.</p>
+                <p>Grazie!</p>
+                <br></br>
+                <p>Architetto Giovanna Emanuela Plomitallo</p>
+                
+            `
+        });
   res.json({ success: true, message: 'Email inviata con successo' });
+  } catch (error) {
+        console.error('Errore:', error);
+        res.json({ success: false, error: error.message });
+    }
 });
 
 

@@ -139,7 +139,23 @@
             "collaboration": "Studio APRUS - Landscape Architecture & People",
             "status": "-"
              },
-             
+              {
+            "data": "2021",
+            "location": "Santa Maria Capua Vetere (CE), Italia",
+            "id": 11,
+            "title": "Restyling di facciata e riqualificazione della corte interna",
+            "images": [
+                "\\images\\giardino-appartamento-4.jpeg", "\\images\\giardino-appartamento-6.jpeg", "\\images\\giardino-appartamento-5.jpeg", "\\images\\giardino-appartamento-1.jpeg", "\\images\\giardino-appartamento-2.jpeg", 
+                "\\images\\giardino-appartamento-3.jpeg" 
+                 
+                
+            ],
+            "description": [
+                "Il progetto nasce dall’esigenza di riqualificare la facciata di un edificio residenziale interno a un portone, caratterizzata da disomogeneità compositiva e degrado materico. L’intervento mira a restituire un’immagine unitaria e contemporanea attraverso l’introduzione di elementi orizzontali e verticali che ridefiniscono il ritmo della facciata. I parapetti pieni vengono reinterpretati con l’inserimento di listelli in legno, che filtrano la luce naturale e migliorano la qualità percettiva degli spazi interni. L’aggiunta di cornici perimetrali contribuisce a dare continuità e coerenza al prospetto. Parallelamente, la corte interna è stata ripensata come spazio di relazione e di passaggio, articolata in due aree: una a prato con percorso pedonale in lastre di pietra e una seconda in ghiaia e calcestruzzo architettonico, arricchita da un olivo centrale, pensata come zona conviviale. Il risultato è un ambiente armonico e luminoso, in equilibrio tra materia, natura e architettura."],
+            "type": "Progetto Privato",
+            "collaboration": "-",
+            "status": "-"
+             },
              {
             "data": "2024",
             "location": "-",
@@ -168,6 +184,7 @@
             "collaboration": "Studio APRUS - Landscape Architecture & People",
             "status": "Progetto presentato (non selezionato)"
              },
+            
               {
             "data": "2018",
             "location": "-",
@@ -186,6 +203,7 @@
             "collaboration": "-",
             "status": "-"
              }
+             
        
     ],
     "contacts": {
